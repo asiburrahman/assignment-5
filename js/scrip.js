@@ -49,10 +49,10 @@ document.querySelector('.clear-btn').addEventListener('click', function(event){
 
 
 function randColor(){
-    const characters = 'abcdef0123456789'
+    const char = 'abcdef0123456789'
     let color ='#'
     for (let i = 0; i < 6; i++) {
-        color += characters.charAt(Math.floor(Math.random() * characters.length));
+        color += char.charAt(Math.floor(Math.random() * char.length));
         
     }
     return color;
