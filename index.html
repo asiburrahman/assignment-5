@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 
 <style>
    .poppins-regular {
@@ -26,7 +27,7 @@
         <div class="flex items-center space-x-4">
             <div class="flex items-center justify-center  space-x-1 bg-[#f4f7ff] px-6 py-2 rounded-3xl">
                 <img class="w-full" src="./assets/checkbox.png" alt="">
-                <h3 class="font-bold text-3xl">23</h3>
+                <h3 class="font-bold text-3xl complete-task">23</h3>
             </div>
             <div class="bg-[#f4f7ff] rounded-full">
                 <img class="p-2" src="./assets/theme-btn.png" alt="">
@@ -37,23 +38,28 @@
         <main class="w-9/12 mx-auto  mt-4 flex space-x-2">
             <section class="w-9/12  bg-white px-2 py-3 rounded-lg shadow-sm">
                 <div class="flex items-center space-x-2 space-y-1 pb-4 mb-8 border-dotted border-black border-b-1">
-                <div class="flex items-center w-36 h-[110px]  bg-[#f4f7ff]  px-2 py-3 space-x-2 rounded-lg">
+                <div class="flex items-center w-38 h-[110px]  bg-[#f4f7ff]  px-2 py-3 space-x-2 rounded-lg">
                     <div class="bg-white rounded-full">
                         <img class="p-2 w-full" src="./assets/checkbox.png" alt="">
                     </div>
                     <div>
                         <p class="text-xs">Task</p>
-                        <h1 class="font-bold text-3xl">05</h1>
+                        <h1 class="font-bold text-3xl task-pending">6</h1>
                     </div>
                 </div>
 
-                <div class="flex flex-1 items-center h-[110px]  px-2 py-3 space-x-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-lg">
+                <div onclick="goToBlog()" class="flex flex-1 items-center h-[110px]  px-2 py-3 space-x-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-lg">
                     <img class="" src="./assets/board.png" alt="">
                     <h2 class="text-white">Discover Something New Today!</h2>
                 </div>
-                <div class="flex items-center h-[110px] w-36 px-2 py-3 space-x-2 rounded-lg bg-[#f4f7ff] ">
+                <div class="flex items-start justify-center flex-col  h-[110px] w-38 px-2 py-3 space-x-2 rounded-lg bg-[#f4f7ff] ">
+                    <div class="flex gap-2 ">
                     <img src="./assets/calender.png" alt="">
-                    <p>Wed, <br> <span class="font-bold">Jul 28 2025</span></p>
+                    <p class="local-day">Wed, <br> </p>
+                    </div>
+                        <span class="font-bold local-date">Jul 28 2025</span>
+                    </div>
+                    
                 </div>
             </div>
             <!-- card section............................................................................. -->
@@ -70,7 +76,7 @@
                             <p class="text-xs">Deadline</p>
                             <p class="text-xs font-semibold">21 March 2025</p>
                         </div>
-                        <button class="px-3 py-1.5 rounded-lg text-white bg-[#3752FD] task-btn">Completed</button>
+                        <button class=" px-3 py-1.5 rounded-lg text-white bg-[#3752FD] task-btn">Completed</button>
                     </div>
     
                 </div>
@@ -162,9 +168,11 @@
                     
                  </div>
                  <div class="text-center border-dotted border-black border-b-1 pb-4">
-                    <button class="px-3 py-1.5 rounded-lg text-white bg-[#3752FD] clear-btn">Clear History</button>
+                    <button id="" class="px-3 py-1.5 rounded-lg text-white bg-[#3752FD] clear-btn">Clear History</button>
                  </div>
-                 
+                 <div class="flex flex-col gap-2  show-log">
+                    
+                 </div>
             </aside>
         </main>
     <script src="js/scrip.js"></script>
