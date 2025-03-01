@@ -48,13 +48,37 @@ document.querySelector('.clear-btn').addEventListener('click', function(event){
 })
 
 
+function randColor(){
+    const characters = 'abcdef0123456789'
+    let color ='#'
+    for (let i = 0; i < 6; i++) {
+        color += characters.charAt(Math.floor(Math.random() * characters.length));
+        
+    }
+    return color;
+}
+
+
+
+document.querySelector('.change-theme').addEventListener('click', function(){
+//    console.log(document.getElementsByTagName("body"));
+let color = randColor();
+// const body = document.getElementsByTagName("body")[0].classList.add(`bg-[${color}]`)
+const body = document.getElementsByTagName("body")[0].style.backgroundColor= `${color}`
+console.log(color);
+
+    
+})
+
+
+
 
 let date = new Date();
-let localdate = date.toDateString().split(" ").slice([1]);
-let localday = date.toDateString().split(" ").slice( 0 ,[1]);
+let localDate = date.toDateString().split(" ").slice([1]);
+let localDay = date.toDateString().split(" ").slice( 0 ,[1]);
 
-document.querySelector('.local-date').innerText = localdate.join(' ');
-document.querySelector('.local-day').innerText = localday.join(' ');
+document.querySelector('.local-date').innerText = localDate.join(' ');
+document.querySelector('.local-day').innerText = localDay.join(' ');
  
 function goToBlog(){
     window.location.assign("blog.html")
